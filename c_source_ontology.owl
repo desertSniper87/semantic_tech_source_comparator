@@ -376,6 +376,15 @@
     
 
 
+    <!-- http://rdf.webofcode.org/woc/Void -->
+
+    <owl:NamedIndividual rdf:about="http://rdf.webofcode.org/woc/Void">
+        <rdf:type rdf:resource="http://rdf.webofcode.org/woc/DataType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://rdf.webofcode.org/woc/Volatile -->
 
     <owl:NamedIndividual rdf:about="http://rdf.webofcode.org/woc/Volatile">
@@ -389,8 +398,28 @@
 
     <owl:NamedIndividual rdf:about="http://rdf.webofcode.org/woc/While">
         <rdf:type rdf:resource="http://rdf.webofcode.org/woc/RepetitiveStructure"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">while</name>
+        <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">while (option!=3){
+    printf(&quot;Please choose an option and press enter:\n&quot;);
+    printf(&quot;1. Read 3 numbers\n 2. Print the max\n 3.Exit\n&quot;);
+    scanf(&quot;%i&quot;,&amp;option);
+    if (option==1) {
+        for (i=0; i&lt;3; i++) {
+            printf(&quot;\nnumbers[%i]=&quot;,i+1);scanf(&quot;%i&quot;,&amp;numbers[i]);
+        }
+    } else if (option==2) {
+        int max = 0;
+        for (i=0; i&lt;3; i++) {
+            if(numbers[i] &gt; max) {
+                max = numbers[i];
+            }
+        }
+        printf(&quot;\nMax=%i&quot;,max);
+    }
+}</source_code>
     </owl:NamedIndividual>
     
+
 
     <!-- http://rdf.webofcode.org/woc/i -->
 
@@ -407,7 +436,6 @@
 
     <owl:NamedIndividual rdf:about="http://rdf.webofcode.org/woc/int_array">
         <rdf:type rdf:resource="http://rdf.webofcode.org/woc/Array"/>
-        <rdf:type rdf:resource="http://rdf.webofcode.org/woc/DataType"/>
         <dimension rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</dimension>
         <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">integer array</name>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integer array</rdfs:label>
@@ -433,6 +461,14 @@
         <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">option</name>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int option = 0</source_code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">option</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rdf.webofcode.org/woc/printf -->
+
+    <owl:NamedIndividual rdf:about="http://rdf.webofcode.org/woc/printf">
+        <rdf:type rdf:resource="http://rdf.webofcode.org/woc/SystemFunction"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
