@@ -316,6 +316,20 @@
     
 
 
+    <!-- https://semantic-web.netlify.com/c_source_ontology/For2 -->
+
+    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/For2">
+        <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/else_if"/>
+        <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for (i=0; i&lt;3; i++) {
+     if(numbers[i] &gt; max) {
+             max = numbers[i];
+     }
+}</source_code>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://semantic-web.netlify.com/c_source_ontology/Int -->
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Int">
@@ -439,6 +453,7 @@
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/else_if">
         <is_else_branch_of rdf:resource="https://semantic-web.netlify.com/c_source_ontology/if"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/While"/>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">else if (option==2) {
         int max = 0;
         for (i=0; i&lt;3; i++) {
@@ -478,6 +493,17 @@
     
 
 
+    <!-- https://semantic-web.netlify.com/c_source_ontology/if2 -->
+
+    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/if2">
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/For2"/>
+        <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if(numbers[i] &gt; max) {
+    max = numbers[i];
+}</source_code>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://semantic-web.netlify.com/c_source_ontology/int_array -->
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/int_array">
@@ -485,6 +511,15 @@
         <dimension rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</dimension>
         <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">integer array</name>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integer array</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantic-web.netlify.com/c_source_ontology/max -->
+
+    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/max">
+        <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/Variable"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/else_if"/>
     </owl:NamedIndividual>
     
 
