@@ -486,6 +486,7 @@
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/if">
         <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure"/>
         <is_else_branch_of rdf:resource="https://semantic-web.netlify.com/c_source_ontology/else_if"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/While"/>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if (option==1) {
         for (i=0; i&lt;3; i++) {
             printf(&quot;\nnumbers[%i]=&quot;,i+1);scanf(&quot;%i&quot;,&amp;numbers[i]);
