@@ -132,7 +132,6 @@
     <!-- https://semantic-web.netlify.com/c_source_ontology/source_code -->
 
     <owl:DatatypeProperty rdf:about="https://semantic-web.netlify.com/c_source_ontology/source_code">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">

@@ -132,7 +132,6 @@
     <!-- https://semantic-web.netlify.com/js_source_ontology/source_code -->
 
     <owl:DatatypeProperty rdf:about="https://semantic-web.netlify.com/js_source_ontology/source_code">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -161,12 +160,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.unibz.it/inf/obdaplugin#RandomClass6677841155 -->
-
-    <owl:Class rdf:about="http://www.unibz.it/inf/obdaplugin#RandomClass6677841155"/>
     
 
 
