@@ -1,0 +1,79 @@
+# 1. Total number of conditional structures
+
+SELECT ?subject WHERE {
+    ?subject rdf:type <http://ontology_uri#ConditionalStructure>
+}
+
+# Expected Result on C code: 3
+# Expected Result on JS code: 3
+
+# 2. Total number of repetitive structures
+
+SELECT ?subject WHERE { 
+    ?subject rdf:type<http://ontology_uri#RepetitiveStructure>
+}
+
+# Expected Result on C code: 3
+# Expected Result on JS code: 3
+
+# 3. Total number of variables
+
+SELECT ?subject WHERE {
+    ?subject rdf:type <http://ontology_uri#Variable>
+}
+
+
+# Expected Result on C code: 4
+# Expected Result on JS code: 4
+
+# 4. Total number of conditional structures included in repetitive structures
+
+SELECT ?subject ?object WHERE { ?object
+    rdf:type <http://ontology_uri#RepetitiveStructure> .
+    ?subject untitled-ontology-4:is_included_in ?object .
+    ?subject rdf:type <http://ontology_uri#ConditionalStructure> 
+}
+
+# Expected Result on C code: 3
+# Expected Result on JS code: 3
+
+# 5. Total number of repetitive structures included in repetitive structures
+
+SELECT ?subject ?object WHERE {
+    ?object rdf:type <http://ontology_uri#RepetitiveStructure> .
+    ?subject untitled-ontology-4:is_included_in ?object .
+    ?subject rdf:type <http://ontology_uri#RepetitiveStructure> 
+}
+
+# Expected Result on C code: 0
+# Expected Result on JS code: 0
+
+# 6.  Total number of system functions called
+
+SELECT ?subject WHERE {
+    ?subject rdf:type<http://ontology_uri#SystemFunction>
+}
+
+# Expected Result on C code: 5
+# Expected Result on JS code: 4
+
+# 7.  Total number of system functions called in conditional structures
+
+SELECT ?subject ?object WHERE {
+    ?object rdf:type <http://ontology_uri#ConditionalStructure> .
+    ?subject untitled-ontology-4:is_included_in ?object .  
+    ?subject rdf:type <http://ontology_uri#SystemFunction>
+ }
+
+ # Expected Result on C code: 1
+ # Expected Result on JS code: 1
+
+# 8. Total Number of repetative structures
+SELECT ?subject ?object WHERE {
+    ?object rdf:type <http://ontology_uri#RepetitiveStructure> .
+    ?subject untitled-ontology-4:is_included_in ?object .  
+    ?subject rdf:type <http://ontology_uri#SystemFunction>
+}
+
+# Expected Result on C code: 4
+# Expected Result on JS code: 3
