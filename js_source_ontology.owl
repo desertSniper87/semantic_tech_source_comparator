@@ -164,6 +164,12 @@
     
 
 
+    <!-- http://www.unibz.it/inf/obdaplugin#RandomClass6677841155 -->
+
+    <owl:Class rdf:about="http://www.unibz.it/inf/obdaplugin#RandomClass6677841155"/>
+    
+
+
     <!-- https://semantic-web.netlify.com/js_source_ontology/Array -->
 
     <owl:Class rdf:about="https://semantic-web.netlify.com/js_source_ontology/Array">
@@ -245,7 +251,7 @@
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/js_source_ontology/For">
         <rdf:type rdf:resource="https://semantic-web.netlify.com/js_source_ontology/RepetitiveStructure"/>
-        <is_included_in rdf:resource="https://semantic-web.netlify.com/js_source_ontology/While"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/js_source_ontology/if"/>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for (i=0; i&lt;3; i++) {
         document.write(&quot;\nnumbers[%i]=&quot;,i+1);scanf(&quot;%i&quot;,&amp;numbers[i]);
 }</source_code>
