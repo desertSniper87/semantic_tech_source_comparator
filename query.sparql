@@ -1,7 +1,19 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# For C source code
+BASE <https://semantic-web.netlify.com/c_source_ontology/>
+
+# For Javascript Code
+BASE <https://semantic-web.netlify.com/js_source_ontology/>
+
+
 # 1. Total number of conditional structures
 
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure>
+    ?subject rdf:type <ConditionalStructure>
 }
 
 # Expected Result on C code: 3
@@ -10,7 +22,7 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 # 2. Total number of repetitive structures
 
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?subject rdf:type<https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure>
+    ?subject rdf:type <RepetitiveStructure>
 }
 
 # Expected Result on C code: 3
@@ -19,7 +31,7 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 # 3. Total number of variables
 
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/Variable>
+    ?subject rdf:type <Variable>
 }
 
 
@@ -29,11 +41,10 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 # 4. Total number of conditional structures included in repetitive structures
 
 
-BASE <https://semantic-web.netlify.com/c_source_ontology/>
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+    ?object rdf:type <RepetitiveStructure> .
     ?subject <is_included_in> ?object .
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure> 
+    ?subject rdf:type <ConditionalStructure>
 }
 
 # Expected Result on C code: 3
@@ -41,11 +52,10 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 
 # 5. Total number of repetitive structures included in repetitive structures
 
-BASE <https://semantic-web.netlify.com/c_source_ontology/>
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+    ?object rdf:type <RepetitiveStructure> .
     ?subject <is_included_in> ?object .
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> 
+    ?subject rdf:type <RepetitiveStructure>
 }
 
 # Expected Result on C code: 0
@@ -54,7 +64,7 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 # 6.  Total number of system functions called
 
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
+    ?subject rdf:type <SystemFunction>
 }
 
 # Expected Result on C code: 5
@@ -62,11 +72,10 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 
 # 7.  Total number of system functions called in conditional structures
 
-BASE <https://semantic-web.netlify.com/c_source_ontology/>
 SELECT (COUNT(?subject) AS ?c) WHERE {
-    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure> .
+    ?object rdf:type <ConditionalStructure> .
     ?subject <is_included_in> ?object .
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
+    ?subject rdf:type <SystemFunction>
  }
 
  # Expected Result on C code: 1
@@ -74,11 +83,10 @@ SELECT (COUNT(?subject) AS ?c) WHERE {
 
 # 8. Total Number of repetative structures
 
-BASE <https://semantic-web.netlify.com/c_source_ontology/>
-SELECT ?subject ?object WHERE {
-    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?object rdf:type <RepetitiveStructure> .
     ?subject <is_included_in> ?object .
-    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
+    ?subject rdf:type <SystemFunction>
 }
 
 # Expected Result on C code: 4
