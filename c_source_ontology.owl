@@ -11,7 +11,7 @@
      xmlns:c_source_ontology="https://semantic-web.netlify.com/c_source_ontology/">
     <owl:Ontology rdf:about="https://semantic-web.netlify.com/c_source_ontology/">
         <rdfs:comment xml:lang="en">An ontology that represents structural and imperative programming languages</rdfs:comment>
-        <rdfs:label xml:lang="en">CodeOntology_Modified</rdfs:label>
+        <rdfs:label xml:lang="en">SoruceCodeOntology</rdfs:label>
     </owl:Ontology>
     
 
@@ -389,7 +389,10 @@
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/max">
         <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/Variable"/>
+        <has_type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/Int"/>
         <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/else_if"/>
+        <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int max = 0</source_code>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -474,6 +477,19 @@
         <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf</name>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf(&quot;%i&quot;,&amp;option);</source_code>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://semantic-web.netlify.com/c_source_ontology/scanf2 -->
+
+    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/scanf2">
+        <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/SystemFunction"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/While"/>
+        <is_type_of rdf:resource="https://semantic-web.netlify.com/c_source_ontology/Void"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf</name>
+        <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf(&quot;%i&quot;,&amp;numbers[i]);</source_code>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scanf2</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
