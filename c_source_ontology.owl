@@ -241,69 +241,6 @@
     
 
 
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Boolean -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Boolean">
-        <rdfs:comment xml:lang="en">The boolean type</rdfs:comment>
-        <rdfs:label xml:lang="en">Boolean</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Byte -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Byte">
-        <rdfs:comment xml:lang="en">The byte type</rdfs:comment>
-        <rdfs:label xml:lang="en">Byte</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Char -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Char">
-        <rdfs:comment xml:lang="en">The char type</rdfs:comment>
-        <rdfs:label xml:lang="en">Char</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Default -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Default">
-        <rdfs:comment xml:lang="en">The default modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Default</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Double -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Double">
-        <rdfs:comment xml:lang="en">The double type</rdfs:comment>
-        <rdfs:label xml:lang="en">Double</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Final -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Final">
-        <rdfs:comment xml:lang="en">The final modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Final</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Float -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Float">
-        <rdfs:comment xml:lang="en">The float type</rdfs:comment>
-        <rdfs:label xml:lang="en">Float</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://semantic-web.netlify.com/c_source_ontology/For -->
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/For">
@@ -341,83 +278,11 @@
     
 
 
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Long -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Long">
-        <rdfs:comment xml:lang="en">The long type</rdfs:comment>
-        <rdfs:label xml:lang="en">Long</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Private -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Private">
-        <rdfs:comment xml:lang="en">The private modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Private</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Protected -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Protected">
-        <rdfs:comment xml:lang="en">The protected modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Protected</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Public -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Public">
-        <rdfs:comment xml:lang="en">The public modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Public</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Short -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Short">
-        <rdfs:comment xml:lang="en">The short type</rdfs:comment>
-        <rdfs:label xml:lang="en">Short</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Static -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Static">
-        <rdfs:comment xml:lang="en">The static modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Static</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Synchronized -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Synchronized">
-        <rdfs:comment xml:lang="en">The synchronized modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Synchronized</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://semantic-web.netlify.com/c_source_ontology/Void -->
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Void">
         <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/DataType"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://semantic-web.netlify.com/c_source_ontology/Volatile -->
-
-    <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/Volatile">
-        <rdfs:comment xml:lang="en">The volatile modifier</rdfs:comment>
-        <rdfs:label xml:lang="en">Volatile</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -592,7 +457,7 @@
 
     <owl:NamedIndividual rdf:about="https://semantic-web.netlify.com/c_source_ontology/printf4">
         <rdf:type rdf:resource="https://semantic-web.netlify.com/c_source_ontology/SystemFunction"/>
-        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/While"/>
+        <is_included_in rdf:resource="https://semantic-web.netlify.com/c_source_ontology/else_if"/>
         <is_type_of rdf:resource="https://semantic-web.netlify.com/c_source_ontology/Void"/>
         <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">printf</name>
         <source_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">printf(&quot;\nMax=%i&quot;,max);</source_code>
