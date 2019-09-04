@@ -1,7 +1,7 @@
 # 1. Total number of conditional structures
 
-SELECT ?subject WHERE {
-    ?subject rdf:type <http://ontology_uri#ConditionalStructure>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure>
 }
 
 # Expected Result on C code: 3
@@ -9,8 +9,8 @@ SELECT ?subject WHERE {
 
 # 2. Total number of repetitive structures
 
-SELECT ?subject WHERE { 
-    ?subject rdf:type<http://ontology_uri#RepetitiveStructure>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?subject rdf:type<https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure>
 }
 
 # Expected Result on C code: 3
@@ -18,8 +18,8 @@ SELECT ?subject WHERE {
 
 # 3. Total number of variables
 
-SELECT ?subject WHERE {
-    ?subject rdf:type <http://ontology_uri#Variable>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/Variable>
 }
 
 
@@ -28,10 +28,12 @@ SELECT ?subject WHERE {
 
 # 4. Total number of conditional structures included in repetitive structures
 
-SELECT ?subject ?object WHERE { ?object
-    rdf:type <http://ontology_uri#RepetitiveStructure> .
-    ?subject untitled-ontology-4:is_included_in ?object .
-    ?subject rdf:type <http://ontology_uri#ConditionalStructure> 
+
+BASE <https://semantic-web.netlify.com/c_source_ontology/>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+    ?subject <is_included_in> ?object .
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure> 
 }
 
 # Expected Result on C code: 3
@@ -39,10 +41,11 @@ SELECT ?subject ?object WHERE { ?object
 
 # 5. Total number of repetitive structures included in repetitive structures
 
-SELECT ?subject ?object WHERE {
-    ?object rdf:type <http://ontology_uri#RepetitiveStructure> .
-    ?subject untitled-ontology-4:is_included_in ?object .
-    ?subject rdf:type <http://ontology_uri#RepetitiveStructure> 
+BASE <https://semantic-web.netlify.com/c_source_ontology/>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+    ?subject <is_included_in> ?object .
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> 
 }
 
 # Expected Result on C code: 0
@@ -50,8 +53,8 @@ SELECT ?subject ?object WHERE {
 
 # 6.  Total number of system functions called
 
-SELECT ?subject WHERE {
-    ?subject rdf:type<http://ontology_uri#SystemFunction>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
 }
 
 # Expected Result on C code: 5
@@ -59,20 +62,23 @@ SELECT ?subject WHERE {
 
 # 7.  Total number of system functions called in conditional structures
 
-SELECT ?subject ?object WHERE {
-    ?object rdf:type <http://ontology_uri#ConditionalStructure> .
-    ?subject untitled-ontology-4:is_included_in ?object .  
-    ?subject rdf:type <http://ontology_uri#SystemFunction>
+BASE <https://semantic-web.netlify.com/c_source_ontology/>
+SELECT (COUNT(?subject) AS ?c) WHERE {
+    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/ConditionalStructure> .
+    ?subject <is_included_in> ?object .
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
  }
 
  # Expected Result on C code: 1
  # Expected Result on JS code: 1
 
 # 8. Total Number of repetative structures
+
+BASE <https://semantic-web.netlify.com/c_source_ontology/>
 SELECT ?subject ?object WHERE {
-    ?object rdf:type <http://ontology_uri#RepetitiveStructure> .
-    ?subject untitled-ontology-4:is_included_in ?object .  
-    ?subject rdf:type <http://ontology_uri#SystemFunction>
+    ?object rdf:type <https://semantic-web.netlify.com/c_source_ontology/RepetitiveStructure> .
+    ?subject <is_included_in> ?object .
+    ?subject rdf:type <https://semantic-web.netlify.com/c_source_ontology/SystemFunction>
 }
 
 # Expected Result on C code: 4
