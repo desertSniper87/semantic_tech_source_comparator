@@ -59,6 +59,13 @@
 	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
 }
 
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
 \lstset{style=mystyle}
 
 \graphicspath{ {../object_property_topic_maps/} }
@@ -143,10 +150,14 @@ of the The Bucharest University of Economic Studies have written a scientific pa
 
 \subsection{Source Code}
 The authors of the paper had given two source codes in the paper that is identical in resulting output
-but different lexically. The source code takes 3 numbers as input and outputs the maximum. \\
+but different lexically. The source code takes 3 numbers as input and outputs the maximum.
 
-One is in the C programming language.
-\lstinputlisting[language=C, caption=C source code for the max out of 3 program, label=c_source]{../src.c}
+\break
+\vspace*{\fill}
+	One is in the C programming language.
+	\lstinputlisting[language=C, caption=C source code for the max out of 3 program, label=c_source]{../src.c}
+\vspace*{\fill}
+\break
 And another is in the Javascript programming language.
 \lstinputlisting[language=JavaScript, caption=JavaScript source code for the max out of 3 program, label=js_source]{../src.js}
 
@@ -265,9 +276,7 @@ toolset to generate dynamic rdf/xml files.
 \section{Modifying Flex/Bison Code Generators to create RDF/XML generators} \label{FLEX_BISON}
 
 Hypothetically, one can use the code generation techniques learned in CSE-310 course and modify the Assignment-4
-(Code Generation) so that the parser generator outputs RDF/XML instead of ASSEMBLY code.
-
-\footnote{\ref{ANTLR} and \ref{FLEX_BISON} has not been fully implemented due to time shortage.}
+(Code Generation) so that the parser generator outputs RDF/XML instead of ASSEMBLY code. \blfootnote{\ref{ANTLR} and \ref{FLEX_BISON} has not been fully implemented due to time shortage.}
 
 \chapter{Appendix}
 
